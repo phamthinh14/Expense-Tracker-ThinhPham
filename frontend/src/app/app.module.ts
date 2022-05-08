@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { ExpenseListComponent } from './components/expense-list/expense-list.component';
 import { AddExpenseComponent } from './components/add-expense/add-expense.component';
 import { RouterModule } from '@angular/router';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { RouterModule } from '@angular/router';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    RouterModule
+    RouterModule,
+    FormsModule
 
   ],
   providers: [],
