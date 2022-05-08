@@ -1,0 +1,6 @@
+<form (ngSubmit)="saveExpense()">
+    <input type="text" name="productName" [(ngModel)]="expenseObj.productName" placeholder="Product Name ">
+    <input type="text" name="cost" [(ngModel)]="expenseObj.cost" placeholder="Cost ">
+    <textarea type="text" name="description" [(ngModel)]="expenseObj.description" placeholder="Description "></textarea>
+    <button type="submit">Add Expense</button>
+</form>
