@@ -21,4 +21,12 @@ public class ExpenseServiceImpl implements ExpenseService {
     public List<Expense> fetchAll() {
         return expenseRepository.findAll();
     }
+
+    @Override
+    public Expense fetchById(Long id) {
+        if (expenseRepository.findById(id).isPresent()) {
+            return expenseRepository.findById(id).get();
+        }
+        return null;
+    }
 }
