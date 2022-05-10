@@ -1,6 +1,23 @@
 <form (ngSubmit)="saveExpense()">
-    <input type="text" name="productName" [(ngModel)]="expenseObj.productName" placeholder="Product Name ">
-    <input type="text" name="cost" [(ngModel)]="expenseObj.cost" placeholder="Cost ">
-    <textarea type="text" name="description" [(ngModel)]="expenseObj.description" placeholder="Description "></textarea>
-    <button type="submit">Add Expense</button>
+    <br>
+    <div class="form-group">
+        <label>Product Name</label>
+        <input type="text" class="form-control" name="productName" [(ngModel)]="expenseObj.productName" placeholder="Product Name ">
+    </div>
+    <br>
+    <br>
+    <div class="form-group">
+        <label>Cost</label>
+        <input type="text" class="form-control" name="cost" [(ngModel)]="expenseObj.cost" placeholder="Cost ">
+    </div>
+    <br>
+    <br>
+    <div class="form-group">
+        <label>Description</label>
+        <textarea type="text" class="form-control" name="description" [(ngModel)]="expenseObj.description"
+            placeholder="Description "></textarea>
+    </div>
+    <br>
+    <br>
+    <button class="btn btn-primary" type="submit">Add Expense</button>
 </form>

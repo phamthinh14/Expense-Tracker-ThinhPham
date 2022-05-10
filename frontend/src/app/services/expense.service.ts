@@ -18,4 +18,8 @@ export class ExpenseService {
   saveExpenses(expense: Expense): Observable<Expense> {
     return this.httpClient.post<Expense>(this.baseUrl, expense);
   }
+
+  getExpenseById(id: number): Observable<Expense> {
+    return this.httpClient.get<Expense>(`${this.baseUrl}/${id}`);
+  }
 }

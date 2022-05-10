@@ -8,4 +8,6 @@ public interface ExpenseService {
     Expense saveProduct(Expense expense);
 
     List<Expense> fetchAll();
+
+    Expense fetchById(Long id);
 }

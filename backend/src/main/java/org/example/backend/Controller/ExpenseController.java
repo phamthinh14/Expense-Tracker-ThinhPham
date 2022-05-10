@@ -28,4 +28,11 @@ public class ExpenseController {
         List<Expense> expensesList = expenseService.fetchAll();
         return new ResponseEntity<>(expensesList, HttpStatus.OK);
     }
+
+    @GetMapping("/expenses/{Id}")
+    public ResponseEntity<Expense> fetchExpenseById(@PathVariable("Id") Long Id) {
+        Expense expenseTmp = expenseService.fetchById(Id);
+        return new ResponseEntity<>(expenseTmp, HttpStatus.OK);
+    }
+
 }
