@@ -3,5 +3,5 @@
     <h3> {{ expense.productName }} </h3>
     <p> {{ expense.description }}</p>
     <p> ${{ expense.cost }} USD</p>
-
+    <a routerLink="/updateExpense/{{ expense.id }}">Update Expense</a>
 </div>

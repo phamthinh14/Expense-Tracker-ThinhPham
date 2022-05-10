@@ -6,7 +6,8 @@ import { ExpenseListComponent } from './components/expense-list/expense-list.com
 const routes: Routes = [
   { path: 'display', component: ExpenseListComponent },
   { path: '', redirectTo: 'display', pathMatch: 'full' },
-  { path: 'addExpense', component: AddExpenseComponent }
+  { path: 'addExpense', component: AddExpenseComponent },
+  { path: 'updateExpense/:id', component: AddExpenseComponent }
 ];
 
 @NgModule({

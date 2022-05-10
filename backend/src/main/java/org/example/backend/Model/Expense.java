@@ -2,6 +2,7 @@ package org.example.backend.Model;
 
 import javax.persistence.*;
 import java.math.BigDecimal;
+import java.util.Objects;
 
 @Entity
 @Table(name = "expense_table")
