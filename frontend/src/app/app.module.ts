@@ -8,6 +8,7 @@ import { ExpenseListComponent } from './components/expense-list/expense-list.com
 import { AddExpenseComponent } from './components/add-expense/add-expense.component';
 import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { FormsModule } from '@angular/forms';
     AppRoutingModule,
     HttpClientModule,
     RouterModule,
-    FormsModule
+    FormsModule,
+    NgbModule
 
   ],
   providers: [],
