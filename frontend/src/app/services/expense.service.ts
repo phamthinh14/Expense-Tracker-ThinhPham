@@ -22,4 +22,8 @@ export class ExpenseService {
   getExpenseById(id: number): Observable<Expense> {
     return this.httpClient.get<Expense>(`${this.baseUrl}/${id}`);
   }
+
+  deleteExpenseById(id: number): Observable<any> {
+    return this.httpClient.delete(`${this.baseUrl}/${id}`, { responseType: 'text' });
+  }
 }

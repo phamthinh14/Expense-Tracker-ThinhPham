@@ -10,4 +10,5 @@ public interface ExpenseService {
     List<Expense> fetchAll();
 
     Expense fetchById(Long id);
+    void deleteExpenseById(Long id);
 }

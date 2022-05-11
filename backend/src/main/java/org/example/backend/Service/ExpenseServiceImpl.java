@@ -29,4 +29,12 @@ public class ExpenseServiceImpl implements ExpenseService {
         }
         return null;
     }
+
+    /**
+     * @param id
+     */
+    @Override
+    public void deleteExpenseById(Long id) {
+        expenseRepository.deleteById(id);
+    }
 }
