@@ -1,4 +1,10 @@
-<a routerLink="/addExpense">Add Expense</a>
+
+<div>
+    <span>Filter: </span>
+    <input type="text" [(ngModel)]="filters.keyword" name="keyword" (input)="listAllExpensesHelper()">
+</div>
+
+
 <div *ngFor="let expense of expenses">
     <h3> {{ expense.productName }} </h3>
     <p> {{ expense.description }}</p>
