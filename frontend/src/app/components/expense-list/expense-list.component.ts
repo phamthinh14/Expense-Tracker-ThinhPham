@@ -14,6 +14,17 @@ export class ExpenseListComponent implements OnInit {
   constructor(private expenseService: ExpenseService) { }
 
   ngOnInit(): void {
+    this.listAllExpensesHelper();
+  }
+
+  deleteExpense(id: number) {
+    this.expenseService.deleteExpenseById(id).subscribe(data => {
+      console.log(data);
+      this.listAllExpensesHelper();
+    });
+  }
+
+  listAllExpensesHelper() {
     this.expenseService.getExpenses().subscribe(
       data => this.expenses = data
     );

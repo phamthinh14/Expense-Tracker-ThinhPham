@@ -105,4 +105,8 @@ class ExpenseServiceImplTest {
         Expense result = expenseService.fetchById(1L);
         assertNull(result);
     }
+
+    @Test
+    void deleteExpenseById() {
+    }
 }

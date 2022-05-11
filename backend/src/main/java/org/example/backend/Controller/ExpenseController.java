@@ -35,4 +35,10 @@ public class ExpenseController {
         return new ResponseEntity<>(expenseTmp, HttpStatus.OK);
     }
 
+    @DeleteMapping("/expenses/{Id}")
+    public ResponseEntity<String> deleteExpense(@PathVariable("Id") Long Id) {
+        expenseService.deleteExpenseById(Id);
+        return new ResponseEntity<>("Expense deleted!", HttpStatus.OK);
+    }
+
 }

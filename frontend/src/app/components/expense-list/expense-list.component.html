@@ -3,5 +3,6 @@
     <h3> {{ expense.productName }} </h3>
     <p> {{ expense.description }}</p>
     <p> ${{ expense.cost }} USD</p>
-    <a routerLink="/updateExpense/{{ expense.id }}">Update Expense</a>
+    <a class="btn btn-primary" role="button" routerLink="/updateExpense/{{ expense.id }}">Update Expense</a>
+    <button type="button" class="btn btn-danger" (click)="deleteExpense(expense.id)">Delete Expense</button>
 </div>
