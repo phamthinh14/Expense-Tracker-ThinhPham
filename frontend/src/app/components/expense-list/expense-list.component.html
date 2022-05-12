@@ -1,14 +1,37 @@
-
-<div>
+<br>
+<div class="container">
     <span>Filter: </span>
     <input type="text" [(ngModel)]="filters.keyword" name="keyword" (input)="listAllExpensesHelper()">
 </div>
-
-
-<div *ngFor="let expense of expenses">
+<br>
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th scope="col">Product Name</th>
+            <th scope="col">Description</th>
+            <th scope="col">Cost</th>
+            <th scope="col">Action</th>
+            <th scope="col">Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let expense of expenses">
+            <td> {{ expense.productName }} </td>
+            <td>{{ expense.description }}</td>
+            <td>${{ expense.cost }}</td>
+            <td>
+                <a class="btn btn-primary" role="button" routerLink="/updateExpense/{{ expense.id }}">Update Expense</a>
+            </td>
+            <td>
+                <button type="button" class="btn btn-danger" (click)="deleteExpense(expense.id)">Delete Expense</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<!-- <div *ngFor="let expense of expenses">
     <h3> {{ expense.productName }} </h3>
     <p> {{ expense.description }}</p>
     <p> ${{ expense.cost }} USD</p>
     <a class="btn btn-primary" role="button" routerLink="/updateExpense/{{ expense.id }}">Update Expense</a>
     <button type="button" class="btn btn-danger" (click)="deleteExpense(expense.id)">Delete Expense</button>
-</div>
+</div> -->
